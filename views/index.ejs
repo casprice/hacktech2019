@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
   <div class ="inner">
@@ -22,20 +23,20 @@
         <h2 style="color: white;">What food do you NOT want?</h2>
         <p> Select all that apply.</p>
         <div class='buttons'>
-          <a><div class="btn3" id="burgers" onclick="toggleColor('0')">Burgers</div></a>
-          <a><div class="btn3" id="fast_food" onclick="toggleColor('3')">Fast Food</div></a>
-          <a><div class="btn3" id="breakfast" onclick="toggleColor('1')">Breakfast</div></a>
-          <a><div class="btn3" id="barbeque" onclick="toggleColor('2')">Barbeque</div></a>
-          <a><div class="btn3" id="chinese" onclick="toggleColor('3')">Chinese</div></a>
-          <a><div class="btn3" id="italian" onclick="toggleColor('3')">Italian</div></a>
-          <a><div class="btn3" id="japanese" onclick="toggleColor('3')">Japanese</div></a>
-          <a><div class="btn3" id="korean" onclick="toggleColor('3')">Korean</div></a>
-          <a><div class="btn3" id="mexican" onclick="toggleColor('3')">Mexican</div></a>
-          <a><div class="btn3" id="sandwiches" onclick="toggleColor('3')">Sandwiches</div></a>
-          <a><div class="btn3" id="pizza" onclick="toggleColor('3')">Pizza</div></a>
-          <a><div class="btn3" id="thai" onclick="toggleColor('3')">Thai</div></a>
-          <a><div class="btn3" id="seafood" onclick="toggleColor('3')">Seafood</div></a>
-          <a><div class="btn3" id="indian" onclick="toggleColor('3')">Indian</div></a>
+          <a><div class="btn3" id="burgers" onclick="toggleCategory('0')">Burgers</div></a>
+          <a><div class="btn3" id="fast_food" onclick="toggleCategory('1')">Fast Food</div></a>
+          <a><div class="btn3" id="breakfast" onclick="toggleCategory('2')">Breakfast</div></a>
+          <a><div class="btn3" id="barbeque" onclick="toggleCategory('3')">Barbeque</div></a>
+          <a><div class="btn3" id="chinese" onclick="toggleCategory('4')">Chinese</div></a>
+          <a><div class="btn3" id="italian" onclick="toggleCategory('5')">Italian</div></a>
+          <a><div class="btn3" id="japanese" onclick="toggleCategory('6')">Japanese</div></a>
+          <a><div class="btn3" id="korean" onclick="toggleCategory('7')">Korean</div></a>
+          <a><div class="btn3" id="mexican" onclick="toggleCategory('8')">Mexican</div></a>
+          <a><div class="btn3" id="sandwiches" onclick="toggleCategory('9')">Sandwiches</div></a>
+          <a><div class="btn3" id="pizza" onclick="toggleCategory('10')">Pizza</div></a>
+          <a><div class="btn3" id="thai" onclick="toggleCategory('11')">Thai</div></a>
+          <a><div class="btn3" id="seafood" onclick="toggleCategory('12')">Seafood</div></a>
+          <a><div class="btn3" id="indian" onclick="toggleCategory('13')">Indian</div></a>
         </div>
       </div>
       <h2>Location</h2>
@@ -50,7 +51,16 @@
     </div>
 
     <div class='container'>
-      <h3>Restaurant Name</h3>
+      <h3>
+        Restaurant Name:
+        <script>
+          name = $.get("server.js", function(data) {
+            .append("the name is " + data.name);
+          })
+          //var name = "help";
+          document.write(name);
+        </script>
+      </h3>
       <p>City searched for: </p>
       <img src=''>
       <p>Open/Closed</p>

@@ -7,6 +7,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const app = express()
 
+
 // yelp api
 const yelp = require('yelp-fusion')
 const request = require('request')
@@ -16,6 +17,7 @@ const config = require('./config.json');
 const apiKey = config.yelpApi;
 const client = yelp.client(apiKey);
 var index = 0;
+var name = null;
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -75,6 +77,8 @@ app.post('/', function (req, res) {
   });
 
 })
+
+
 
 app.listen(3000, function () {
   console.log('App listening on port 3000!')

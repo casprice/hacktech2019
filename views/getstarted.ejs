@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<html>
 <head>
   	<title>Randomize</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
 </head>
 <body>
   <div class ="inner">
@@ -43,25 +45,25 @@
       <p>This website will generate a random restaurant based on your preferences and your current location.</p>
       <div class="container">
       <fieldset>
-        <form action="/" method="post">
+        <form id='message-form' action="/" method="post">
           <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
-          <input type="submit" class="ghost-button" value="Get Weather">
+          <input type="submit" id='submit-btn' class="ghost-button" value="Decide what to eat">
         </form>
       </fieldset>
     </div>
 
     <div class='container'>
-      <h3>
+      <p>City searched for: </p>
+      <p>
         Restaurant Name:
-        <script>
+        <!--<script>
           name = $.get("server.js", function(data) {
             .append("the name is " + data.name);
           })
           //var name = "help";
           document.write(name);
-        </script>
-      </h3>
-      <p>City searched for: </p>
+        </script>-->
+      </p>
       <img src=''>
       <p>Open/Closed</p>
       <p><a href=''>Visit their Yelp page</a></p>
@@ -73,6 +75,6 @@
   </div>
 
   <script src='js/categories.js'></script>
-
+  <script src='js/index.js'></script>
 </body>
 </html>

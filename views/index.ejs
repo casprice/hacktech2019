@@ -1,24 +1,61 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Test</title>
+<head>
+  	<title>Randomize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    <div class="container">
-      <fieldset>
-        <form action="/" method="post">
-          <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
-          <input type="submit" class="ghost-button" value="Get Recommendation">
-          <!--<input type="submit" class="ghost-button" value="Recommend me something else!">-->
-        </form>
-      </fieldset>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+  <div class ="inner">
+    <div class ="content2">
+      <h2>Price Range</h2>
+      <p> Select how much you are willing to spend on food.</p>
+      <div class='buttons'>
+        <a><div class="btn2" id="cheap" onclick="toggleColor('0')">$</div></a>
+        <a><div class="btn2" id="medium" onclick="toggleColor('1')">$$</div></a>
+        <a><div class="btn2" id="expensive" onclick="toggleColor('2')">$$$</div></a>
+        <a><div class="btn2" id="bougie" onclick="toggleColor('3')">$$$$</div></a>
+      </div>
+      <br>
+      <br>
+      <div class="w3-container w3-black w3-center w3-opacity w3-padding-64 content2">
+        <h2 style="color: white;">What food do you NOT want?</h2>
+        <p> Select all that apply.</p>
+      </div>
+      <h2>Location</h2>
+      <p>This website will generate a random restaurant based on your preferences and your current location.</p>
     </div>
+  </div>
 
-    <div class='container'>
-      <h3>Randomly generated restaurant</h3>
-    </div>
-  </body>
+  <script>
+    var selected = ['false', 'false', 'false', 'false'];
+
+      function toggleColor(index) {
+          switch(index) {
+            case '0':
+              property = document.getElementById("cheap");
+              break;
+            case '1':
+              property = document.getElementById("medium");
+              break;
+            case '2':
+              property = document.getElementById("expensive");
+              break;
+            case '3':
+              property = document.getElementById("bougie");
+              break;
+          }
+
+          if (selected[index]) {
+              property.style.backgroundColor = "white";
+          }
+          else {
+              property.style.backgroundColor = "#83f776";
+          }
+
+          selected[index] = !selected[index];
+      }
+  </script>
+
+</body>
 </html>

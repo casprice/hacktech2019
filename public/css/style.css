@@ -1,75 +1,142 @@
-/*
-  Styles from this codepen:
-  https://codepen.io/official_naveen/pen/rgknI
-*/
-
-body {
-  width: 800px;
+@import url("http:fonts.googleapis.com/css?family=Yantramanav:100");
+@import url("http:fonts.googleapis.com/css?family=Montserrat:400");
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.intro {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background: url()no-repeat;
+  display: table;
+  top: 0;
+  background-size: cover;
+}
+.intro .inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+}
+.content{
+  max-width: 600px;
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding-bottom: 30%;
 }
-.container {
-  width: 600px;
-  margin: 0 auto;
+.content h1{
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 600%;
+  font-weight: 100;
+  color: #E1EFE9;
 }
-fieldset {
-  display: block;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  -webkit-padding-before: 0em;
-  -webkit-padding-start: 0em;
-  -webkit-padding-end: 0em;
-  -webkit-padding-after: 0em;
-  border: 0px;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
-  min-width: -webkit-min-content;
-  padding: 30px;
+.btn {
+   font-family:'Montserrat', sans-serif;
+   font-size: 135%;
+   font-weight: 400;
+   color: #3A6168;
+   text-transform: uppercase;
+   text-decoration: none;
+   border: solid #3A6168;
+   padding: 10px 20px;
+   border-radius: 9px;
+   transition: all 0.5s;
 }
-.ghost-input, p {
-  display: block;
-  font-weight:300;
-  width: 100%;
-  font-size: 25px;
-  border:0px;
-  outline: none;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #4b545f;
-  background: #fff;
-  font-family: Open Sans,Verdana;
-  padding: 10px 15px;
-  margin: 30px 0px;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-.ghost-input:focus {
-  border-bottom:1px solid #ddd;
-}
-.ghost-button {
-  background-color: transparent;
-  border:2px solid #ddd;
-  padding:10px 30px;
-  width: 100%;
-  min-width: 350px;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-.ghost-button:hover {
-  border:2px solid #515151;
-  cursor: pointer;
+.btn:hover {
+  color: #CBDFD6
+  border: solid #CBDFD6 2px;
 }
 p {
-  color: #E64A19;
+    font-size: 150%;
+    line-height: 120%;
+    font-family: sans-serif;
+}
+.content2{
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30%;
+}
+.content2 h2{
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 300%;
+  font-weight: 100;
+  color: black;
+  margin: 20px 0;
+}
+.buttons {
+  display: inline-flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.btn2 {
+   font-family:'Montserrat', sans-serif;
+   font-size: 135%;
+   font-weight: 400;
+   color: #3A6168;
+   background-color: white;
+   text-transform: uppercase;
+   text-decoration: none;
+   width: 80px;
+   border: solid #3A6168;
+   padding: 10px 20px;
+   border-radius: 9px;
+   transition: all 0.5s;
+   display: flex;
+   justify-content: center;
+}
+
+.btn2:hover {
+  color: #CBDFD6
+  border: solid #CBDFD6 2px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .content{
+    padding-bottom: 30%;
+  }
+  .content h1{
+    font-size: 450%;
+  }
+  .btn {
+    font-size: 110%;
+    padding: 9px 17px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content{
+    padding-bottom: 40%;
+  }
+  .content h1{
+    font-size: 300%;
+  }
+  .btn {
+    font-size: 110%;
+    padding: 9px 15px;
+  }
+  p {
+    font-size: 120%;
+    line-height: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content{
+    padding-bottom: 40%;
+  }
+  .content h1{
+    font-size: 250%;
+  }
+  .btn {
+    font-size: 110%;
+    padding: 6px 14px;
+  }
+  p {
+    font-size: 100%;
+    line-height: 100%;
+  }
 }

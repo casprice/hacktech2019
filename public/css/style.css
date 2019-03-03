@@ -1,10 +1,13 @@
 @import url("http:fonts.googleapis.com/css?family=Yantramanav:100");
 @import url("http:fonts.googleapis.com/css?family=Montserrat:400");
+@import url("http:fonts.googleapis.com/css?family=OpenSans:400");
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 .intro {
   height: 100%;
@@ -33,7 +36,7 @@ html, body {
   font-weight: 100;
   color: #E1EFE9;
 }
-.btn {
+.btn, .btn2, .btn3 {
    font-family:'Montserrat', sans-serif;
    font-size: 135%;
    font-weight: 400;
@@ -71,9 +74,18 @@ p {
   display: inline-flex;
   width: 400px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .btn2 {
+  width: 80px;
+}
+
+.btn3 {
+  width: 180px;
+}
+
+.btn2, .btn3 {
    font-family:'Montserrat', sans-serif;
    font-size: 135%;
    font-weight: 400;
@@ -81,19 +93,81 @@ p {
    background-color: white;
    text-transform: uppercase;
    text-decoration: none;
-   width: 80px;
    border: solid #3A6168;
    padding: 10px 20px;
+   margin: 10px 0;
    border-radius: 9px;
    transition: all 0.5s;
    display: flex;
    justify-content: center;
 }
 
-.btn2:hover {
+.btn2:hover, .btn3:hover {
   color: #CBDFD6
   border: solid #CBDFD6 2px;
   cursor: pointer;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+fieldset {
+  display: block;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-before: 0em;
+  -webkit-padding-start: 0em;
+  -webkit-padding-end: 0em;
+  -webkit-padding-after: 0em;
+  border: 0px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  min-width: -webkit-min-content;
+  padding: 30px;
+}
+.ghost-input {
+  border-bottom:1px solid #ddd;
+}
+.ghost-input, p {
+  display: block;
+  font-weight:300;
+  width: 100%;
+  font-size: 25px;
+  border:0px;
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #4b545f;
+  background: #fff;
+  font-family: Open Sans,Verdana;
+  padding: 10px 15px;
+  margin: 30px 0px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.ghost-button {
+  background-color: transparent;
+  border:2px solid #ddd;
+  padding:10px 30px;
+  width: 100%;
+  min-width: 350px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.ghost-button:hover {
+  border:2px solid #515151;
 }
 
 @media screen and (max-width: 900px) {

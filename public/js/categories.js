@@ -1,17 +1,32 @@
+var selected = ['false', 'false', 'false', 'false'];
+  function togglePrice(index) {
+      switch(index) {
+        case '0':
+          property = document.getElementById("cheap"); break;
+        case '1':
+          property = document.getElementById("medium"); break;
+        case '2':
+          property = document.getElementById("expensive"); break;
+        case '3':
+          property = document.getElementById("bougie"); break;
+      }
 
-// ----------   $       $$     $$$  ------ //
-var prices = ['true', 'true', 'true'];
+      if (selected[index]) {
+          property.style.backgroundColor = "white";
+      } else {
+          property.style.backgroundColor = "#55cc3b";
+      }
 
-function togglePrice(index) {
-  prices[index] = !prices[index];
-}
+      selected[index] = !selected[index];
+  }
 
-var categories = ['true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true']
+
+var categories = ['true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true']
 
 var burgers = 0;
-var breakfast_brunch = 1;
+var breakfast = 1;
 var barbeque = 2;
-var deli = 3;
+var chinese = 3;
 var italian = 4;
 var japanese = 5;
 var korean = 6;

@@ -11,51 +11,58 @@
       <h2>Price Range</h2>
       <p> Select how much you are willing to spend on food.</p>
       <div class='buttons'>
-        <a><div class="btn2" id="cheap" onclick="toggleColor('0')">$</div></a>
-        <a><div class="btn2" id="medium" onclick="toggleColor('1')">$$</div></a>
-        <a><div class="btn2" id="expensive" onclick="toggleColor('2')">$$$</div></a>
-        <a><div class="btn2" id="bougie" onclick="toggleColor('3')">$$$$</div></a>
+        <a><div class="btn2" id="cheap" onclick="togglePrice('0')">$</div></a>
+        <a><div class="btn2" id="medium" onclick="togglePrice('1')">$$</div></a>
+        <a><div class="btn2" id="expensive" onclick="togglePrice('2')">$$$</div></a>
+        <a><div class="btn2" id="bougie" onclick="togglePrice('3')">$$$$</div></a>
       </div>
       <br>
       <br>
       <div class="w3-container w3-black w3-center w3-opacity w3-padding-64 content2">
         <h2 style="color: white;">What food do you NOT want?</h2>
         <p> Select all that apply.</p>
+        <div class='buttons'>
+          <a><div class="btn3" id="burgers" onclick="toggleColor('0')">Burgers</div></a>
+          <a><div class="btn3" id="fast_food" onclick="toggleColor('3')">Fast Food</div></a>
+          <a><div class="btn3" id="breakfast" onclick="toggleColor('1')">Breakfast</div></a>
+          <a><div class="btn3" id="barbeque" onclick="toggleColor('2')">Barbeque</div></a>
+          <a><div class="btn3" id="chinese" onclick="toggleColor('3')">Chinese</div></a>
+          <a><div class="btn3" id="italian" onclick="toggleColor('3')">Italian</div></a>
+          <a><div class="btn3" id="japanese" onclick="toggleColor('3')">Japanese</div></a>
+          <a><div class="btn3" id="korean" onclick="toggleColor('3')">Korean</div></a>
+          <a><div class="btn3" id="mexican" onclick="toggleColor('3')">Mexican</div></a>
+          <a><div class="btn3" id="sandwiches" onclick="toggleColor('3')">Sandwiches</div></a>
+          <a><div class="btn3" id="pizza" onclick="toggleColor('3')">Pizza</div></a>
+          <a><div class="btn3" id="thai" onclick="toggleColor('3')">Thai</div></a>
+          <a><div class="btn3" id="seafood" onclick="toggleColor('3')">Seafood</div></a>
+          <a><div class="btn3" id="indian" onclick="toggleColor('3')">Indian</div></a>
+        </div>
       </div>
       <h2>Location</h2>
       <p>This website will generate a random restaurant based on your preferences and your current location.</p>
+      <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+          <input type="submit" class="ghost-button" value="Get Weather">
+        </form>
+      </fieldset>
+    </div>
+
+    <div class='container'>
+      <h3>Restaurant Name</h3>
+      <p>City searched for: </p>
+      <img src=''>
+      <p>Open/Closed</p>
+      <p><a href=''>Visit their Yelp page</a></p>
+      <p>Categories: </p>
+      <p>Rating: </p>
+      <p>Price: </p>
+      <p>Address: </p>
     </div>
   </div>
 
-  <script>
-    var selected = ['false', 'false', 'false', 'false'];
-
-      function toggleColor(index) {
-          switch(index) {
-            case '0':
-              property = document.getElementById("cheap");
-              break;
-            case '1':
-              property = document.getElementById("medium");
-              break;
-            case '2':
-              property = document.getElementById("expensive");
-              break;
-            case '3':
-              property = document.getElementById("bougie");
-              break;
-          }
-
-          if (selected[index]) {
-              property.style.backgroundColor = "white";
-          }
-          else {
-              property.style.backgroundColor = "#83f776";
-          }
-
-          selected[index] = !selected[index];
-      }
-  </script>
+  <script src='js/categories.js'></script>
 
 </body>
 </html>

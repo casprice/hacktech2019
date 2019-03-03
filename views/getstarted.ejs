@@ -56,13 +56,15 @@
       <p>City searched for: </p>
       <p>
         Restaurant Name:
-        <!--<script>
-          name = $.get("server.js", function(data) {
-            .append("the name is " + data.name);
-          })
-          //var name = "help";
-          document.write(name);
-        </script>-->
+        <span id='nameID'></span>
+        <script src='js/index.js'>
+          //name = $.get("server.js", function(data) {
+          //  .append("the name is " + data.name);
+          //})
+          //name = "me";
+          document.write(`${name}`);
+          console.log("resname " + `${name}`)
+        </script>
       </p>
       <img src=''>
       <p>Open/Closed</p>

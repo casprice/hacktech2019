@@ -109,15 +109,22 @@ app.post('/', function (req, res) {
 
     io.on('connection', (socket) => {
 
-      socket.emit('newMessage', {
-        from: "Casey",
-        text: "this is sad"
+      socket.emit('restaurant_data', {
+        name: name,
+        image_url: data['image_url'],
+        is_closed: data['is_closed'],
+        yelp_url: data['url'],
+        categories: data.categories,
+        rating: data['rating'],
+        price: data['price'],
+        address: data.location.display_address,
+        phone_num: data['display_phone']
       })
 
       socket.on('createMessage', (message) => {
         console.log("createMessage", message);
       })
-    
+
     } )
 
   }). catch(e => {

@@ -10,8 +10,11 @@ const app = express()
 // yelp api
 const yelp = require('yelp-fusion')
 const request = require('request')
+<<<<<<< HEAD
 
 // private api key
+=======
+>>>>>>> 9e6af23cebcdccf791d3302b7d946013927129f0
 const config = require('./config.json');
 const apiKey = config.yelpApi;
 const client = yelp.client(apiKey);
